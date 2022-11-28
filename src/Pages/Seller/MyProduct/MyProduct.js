@@ -11,7 +11,7 @@ const MyProduct = () => {
     console.log(id);
     const proceed = window.confirm("Are you sure to delete?");
     if (proceed) {
-      fetch(`http://localhost:5000/product/${id}`, {
+      fetch(`https://phonehaat-server.vercel.app/product/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())
@@ -25,7 +25,7 @@ const MyProduct = () => {
   };
 
   useEffect(() => {
-    fetch("http://localhost:5000/product")
+    fetch("https://phonehaat-server.vercel.app/product")
       .then((res) => res.json())
       .then((data) => {
         setPro(data);

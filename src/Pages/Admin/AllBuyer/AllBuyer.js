@@ -8,14 +8,14 @@ const AllBuyer = () => {
   //   const { data: users = [] } = useQuery({
   //     queryKey: ["users"],
   //     queryFn: () =>
-  //       fetch("http://localhost:5000/users").then((res) => res.json()),
+  //       fetch("https://phonehaat-server.vercel.app/users").then((res) => res.json()),
   //   });
 
   const handleDelete = (id) => {
     console.log(id);
     const proceed = window.confirm("Are you sure to delete?");
     if (proceed) {
-      fetch(`http://localhost:5000/users/${id}`, {
+      fetch(`https://phonehaat-server.vercel.app/users/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())
@@ -28,7 +28,7 @@ const AllBuyer = () => {
     }
   };
   useEffect(() => {
-    fetch("http://localhost:5000/users")
+    fetch("https://phonehaat-server.vercel.app/users")
       .then((res) => res.json())
       .then((data) => {
         setUser(data);

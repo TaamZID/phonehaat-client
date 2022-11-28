@@ -7,7 +7,9 @@ const MyOrder = () => {
   const { data: bookings = [] } = useQuery({
     queryKey: ["bookings"],
     queryFn: () =>
-      fetch("http://localhost:5000/bookings").then((res) => res.json()),
+      fetch("https://phonehaat-server.vercel.app/bookings").then((res) =>
+        res.json()
+      ),
   });
   return (
     <div className="max-w-[1440px] mx-auto">

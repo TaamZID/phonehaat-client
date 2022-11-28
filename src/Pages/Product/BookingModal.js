@@ -24,7 +24,7 @@ const BookingModal = ({ p, setProduct }) => {
       phone,
     };
 
-    fetch("http://localhost:5000/booknow", {
+    fetch("https://phonehaat-server.vercel.app/booknow", {
       method: "POST",
       headers: {
         "content-type": "application/json",

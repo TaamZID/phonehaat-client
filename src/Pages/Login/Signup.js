@@ -62,7 +62,7 @@ const Signup = () => {
 
   const saveUser = (email, role) => {
     const user = { email, role };
-    fetch("http://localhost:5000/users", {
+    fetch("https://phonehaat-server.vercel.app/users", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -122,11 +122,11 @@ const Signup = () => {
               </div>
               <div className="w-full py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding">
                 <div className="mb-6">
-                  <label htmlFor="role">
-                    Signup as: {" "}
-                  </label>
+                  <label htmlFor="role">Signup as: </label>
                   <select id="role">
-                    <option value="User" selected>User</option>
+                    <option value="User" selected>
+                      User
+                    </option>
                     <option value="Seller">Seller</option>
                   </select>
                 </div>

@@ -51,7 +51,7 @@ const route = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/category/${params.id}`),
+          fetch(`https://phonehaat-server.vercel.app/category/${params.id}`),
       },
     ],
   },
@@ -66,7 +66,7 @@ const route = createBrowserRouter([
       {
         path: "/dashboard",
         element: <Dashboard></Dashboard>,
-        loader: () => fetch("http://localhost:5000/users"),
+        loader: () => fetch("https://phonehaat-server.vercel.app/users"),
       },
       {
         path: "/dashboard/myorder",

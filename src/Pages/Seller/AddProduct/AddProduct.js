@@ -32,7 +32,7 @@ const AddProduct = () => {
       isA: true,
     };
 
-    fetch("http://localhost:5000/product", {
+    fetch("https://phonehaat-server.vercel.app/product", {
       method: "POST",
       headers: {
         "content-type": "application/json",

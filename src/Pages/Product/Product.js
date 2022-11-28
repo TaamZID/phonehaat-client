@@ -8,12 +8,12 @@ const Product = () => {
   // const { data: product = [], refetch } = useQuery({
   //   queryKey: ["product"],
   //   queryFn: () =>
-  //     fetch("http://localhost:5000/product").then((res) => res.json()),
+  //     fetch("https://phonehaat-server.vercel.app/product").then((res) => res.json()),
   // });
   const [p, setProduct] = useState(null);
   const [pro, setPro] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/product")
+    fetch("https://phonehaat-server.vercel.app/product")
       .then((res) => res.json())
       .then((data) => {
         setPro(data);
@@ -34,12 +34,7 @@ const Product = () => {
               )
             )}
           </div>
-          {p && (
-            <BookingModal
-              p={p}
-              setProduct={setProduct}
-            ></BookingModal>
-          )}
+          {p && <BookingModal p={p} setProduct={setProduct}></BookingModal>}
         </div>
       </div>
     </div>

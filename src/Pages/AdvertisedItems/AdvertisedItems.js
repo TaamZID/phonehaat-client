@@ -7,7 +7,9 @@ const AdvertisedItems = () => {
   const { data: product = [], refetch } = useQuery({
     queryKey: ["product"],
     queryFn: () =>
-      fetch("http://localhost:5000/product").then((res) => res.json()),
+      fetch("https://phonehaat-server.vercel.app/product").then((res) =>
+        res.json()
+      ),
   });
   const { p, setProduct } = useState(null);
   return (

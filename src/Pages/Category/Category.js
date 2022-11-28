@@ -7,7 +7,9 @@ const Category = () => {
   const { data: category = [] } = useQuery({
     queryKey: ["category"],
     queryFn: () =>
-      fetch("http://localhost:5000/category").then((res) => res.json()),
+      fetch("https://phonehaat-server.vercel.app/category").then((res) =>
+        res.json()
+      ),
   });
   return (
     <div className="max-w-[1440px] mx-auto">
