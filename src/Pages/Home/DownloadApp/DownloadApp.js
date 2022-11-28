@@ -1,17 +1,15 @@
 import React from "react";
+import img from "./image/app.png";
 
 const DownloadApp = () => {
   return (
     <div className="hero bg-cyan-500 rounded-lg mt-6 mb-6">
       <div className="hero-content text-center">
         <div className="max-w-md">
-          <h1 className="text-5xl font-bold">Hello there</h1>
-          <p className="py-6">
-            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
-            a id nisi.
-          </p>
-          <button className="btn btn-primary">Get Started</button>
+          <h2 className="text-5xl text-white mb-4">Download the app</h2>
+          <figure>
+            <img src={img} style={{ height: 200 }} alt="Shoes" />
+          </figure>
         </div>
       </div>
     </div>

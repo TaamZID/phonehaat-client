@@ -21,40 +21,47 @@ const DashboardLayout = () => {
         <div className="drawer-content">
           <Outlet></Outlet>
         </div>
-        <div className="drawer-side">
-          <label htmlFor="dashboard-drawer" className="drawer-overlay"></label>
-          <ul className="menu p-4 w-80 text-base-content">
-            {isAdmin && (
-              <>
-                <li>
-                  <Link to="/dashboard/allbuyers">All Buyers</Link>
-                </li>
-                <li>
-                  <Link to="/dashboard/allsellers">All Sellers</Link>
-                </li>
-                <li>
-                  <Link to="/dashboard/reporteditems">Reported Items</Link>
-                </li>
-              </>
-            )}
-            {isSeller && (
-              <>
-                <li>
-                  <Link to="/dashboard/myproduct">My Products</Link>
-                </li>
-                <li>
-                  <Link to="/dashboard/addproduct">Add Products</Link>
-                </li>
-              </>
-            )}
-            {!isAdmin && !isSeller && (
-              <>
-                <li>
-                  <Link to="/dashboard/myorder">My Orders</Link>
-                </li>
-              </>
-            )}
-          </ul>
+        <div className="max-w-[1440px] mx-auto">
+          <div className="mx-10">
+            <div className="drawer-side">
+              <label
+                htmlFor="dashboard-drawer"
+                className="drawer-overlay"
+              ></label>
+              <ul className="menu p-4 w-80 text-base-content">
+                {isAdmin && (
+                  <>
+                    <li>
+                      <Link to="/dashboard/allbuyers">All Buyers</Link>
+                    </li>
+                    <li>
+                      <Link to="/dashboard/allsellers">All Sellers</Link>
+                    </li>
+                    <li>
+                      <Link to="/dashboard/reporteditems">Reported Items</Link>
+                    </li>
+                  </>
+                )}
+                {isSeller && (
+                  <>
+                    <li>
+                      <Link to="/dashboard/myproduct">My Products</Link>
+                    </li>
+                    <li>
+                      <Link to="/dashboard/addproduct">Add Products</Link>
+                    </li>
+                  </>
+                )}
+                {!isAdmin && !isSeller && (
+                  <>
+                    <li>
+                      <Link to="/dashboard/myorder">My Orders</Link>
+                    </li>
+                  </>
+                )}
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>

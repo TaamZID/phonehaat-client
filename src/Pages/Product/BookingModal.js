@@ -3,7 +3,7 @@ import { AuthContext } from "../../contexts/AuthProvider/AuthProvider";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const BookingModal = ({ p, setProduct, refetch }) => {
+const BookingModal = ({ p, setProduct }) => {
   const { name, rprice } = p;
   const { user } = useContext(AuthContext);
 
@@ -35,9 +35,10 @@ const BookingModal = ({ p, setProduct, refetch }) => {
       .then((data) => {
         console.log(data);
         if (data.acknowledged) {
-          setProduct(null);
+          // setProduct(null);
           toast.success("Booking confirmed.");
-          refetch();
+          // refetch();
+          form.reset();
         } else {
           toast.error(data.message);
         }

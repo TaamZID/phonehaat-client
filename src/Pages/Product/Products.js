@@ -8,7 +8,7 @@ const Products = ({ cat, setProduct }) => {
         <img
           src={cat.url}
           style={{ height: 250 }}
-          alt="Shoes"
+          alt="Phone"
           className="rounded-xl"
         />
       </figure>
@@ -38,11 +38,7 @@ const Products = ({ cat, setProduct }) => {
             {cat.isVerified ? <FcOk></FcOk> : null}
           </h3>
         </div>
-        {/* <div className="card-actions">
-                      <Link to={`category/${cat._id}`}>
-                        <button className="btn btn-primary">Book Now</button>
-                      </Link>
-                    </div> */}
+        
         <label
           htmlFor="my-modal-3"
           className="btn"
