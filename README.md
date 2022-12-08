@@ -22,6 +22,6 @@
 - Firebase & Vercel.
 
 ## Admin Login
-- adminEmail: admin@gmail.com
-- adminPassword: admin0
+- adminEmail: xxxxx@gmail.com
+- adminPassword: xxxxxx
 
