@@ -10,7 +10,7 @@
 - Users can sell all products, can book & see his/her orders.
 - Users can pay and checkout.
 - Seller can add products to sell, can see his/her all products.
-- Blog Sections.
+- Blog Section.
 
 
 ## Technologies Used 
